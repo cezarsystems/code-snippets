@@ -14,7 +14,7 @@ namespace EnumTests
         TituloEleitor = 1003
     }
 
-    public static class EnumDescritionValueHelper
+    public static class EnumDescriptionValueHelper
     {
         public static (int, string) Get<T>(this T enumValue)
            where T : struct, IConvertible
@@ -50,7 +50,7 @@ namespace EnumTests
     {
          public static void Main()
          {
-            var x = EnumDescritionValueHelper.Get<DocumentosEnum>(DocumentosEnum.CPF);
+            var x = EnumDescriptionValueHelper.Get<DocumentosEnum>(DocumentosEnum.CPF);
 
             Console.WriteLine($"Código { x.Item1 } com a descrição: { x.Item2 }");
          }
